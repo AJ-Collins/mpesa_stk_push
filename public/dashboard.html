@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US" lang="en-US" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary Meta Tags -->
+    <title>Qualification Check  | waveLoans</title>
+    <meta name="title" content="Loan Qualification Check">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<!-- fontawesome -->
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+
+<!-- custom styling -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+<link rel="stylesheet" type="text/css" href="../css/animation.css">
+
+<body >
+<div class="boxed_wrapper">
+
+    <div class="loader-wrapper">
+        <div class="loader">
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <section style="background-image: url(../public/images/bh.png);">
+        <div class="container">
+            <div class="wrapper">
+                <div class="row pb-3">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6>Hi <strong><span id="name"></span></strong>  you have qualified for a Loan of
+                                    <strong>Ksh. <span id="qualified_loaninfo"></span></strong> to your M-PESA. Your loan repayment period is 2 months with a <strong>6% interest rate</strong>. Terms and conditions apply</h6>
+                    </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <table id="table" class="table table-responsive table-bordered table-striped">
+                                    <tr>
+                                        <td>Loan Tracking ID:</td>
+                                        <td id="loan-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Your Names:</td>
+                                        <td id="names"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MPESA Number:</td>
+                                        <td id="mpesa_number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID Number:</td>
+                                        <td id="id_number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loan Type</td>
+                                        <td id="loan_type"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Qualified Loan</td>
+                                        <td id="qualified_loan"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Processing Fee</td>
+                                        <td id="processing_fee"></td>
+                                    </tr>
+                                </table>
+                                Please check and complete payment to continue
+                                <form id="paymentForm">
+                                    <!--<input type="hidden" id="_token" value="lSyLlygXxfitQ6wxFpRka7QYPmjJybMwDT3TNsCN">-->                                   
+                                    <input id="qualified_loan" name="qualified_loan" type="hidden">
+                                    <input id="id_numberpay" name="id_numberpay" hidden>
+                                    <input id="mpesa_numberpay" name="mpesa_numberpay" type="hidden"> 
+                                    <input id="loan-idpay" name="loan-idpay" type="hidden">
+                                    <input id="processing_feepay" name="processing_feepay" type="hidden">
+                                    <div class="row pb-2">
+                                        <div class="signin-none tab-100 col-md-12">
+                                            <!-- sign up checkbox -->
+                                            <label class="signin-none">
+                                                <!--<span>
+                                                    <input type="checkbox" name="reg-agree">
+                                                </span>-->
+                                                <span>
+												By submitting you confirm that you accept the <a data-bs-toggle="modal" data-bs-target="#terms" style="color:#564FF9;">Terms and Conditions</a> and <a data-bs-toggle="modal" data-bs-target="#policy" style="color:#564FF9;">Privacy Policy</a>
+											</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-danger">Get Loan Now
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+
+                                <h2>Total Loans issued today</h2>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-4 pb-2">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <strong><small>5,000</small> </strong><br><small>Borrowers</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 pb-2">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <strong><small>Kes. 460,000</small></strong> <br><small>Disbursed</small>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4 pb-2">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <strong><small>Kes. 200,049</small></strong><br> <small>Paid</small>
+                                            </div>
+                                        </div>
+                                            </div>
+                                    
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="policy" tabindex="-1" aria-labelledby="policy" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="policy">Loan Policies</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                We care about your privacy, data protection, and confidentiality. This Privacy policy <strong>(hereinafter – “Privacy policy”)</strong> states, what information we collect, for which purposes and means, and what are your rights.
+<p> When is this Privacy policy applicable?</p>
+
+<p>This Privacy policy applies when:</p>
+<p>
+You use or have expressed the intention to use any of our Services;
+You represent a Client (for example as a guarantor, the payer, authorized representative, next of kin etc.) or you have been indicated as the contact person for the Client;</p>
+<p>
+You have used our Services in the past and we are required to retain this information;</p>
+<p>
+You contact us or visit any of our representative and customer service offices;
+You visit our website;</p>
+<p>
+In any other way provide us with your personal data for any of the data processing purposes set in this Privacy policy.
+</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal fade" id="terms" tabindex="-1" aria-labelledby="terms" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="terms">Terms and Conditions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Loan facilities borrowed under this product will be hinged on pre- existing
+products features.
+</p>
+<p>
+In case of default of the USSD loans; the loan product facility shall be deemed to be in arrears and normal collection Processes shall apply.
+</p>
+<p>
+The maximum loan amount: Ksh 15,000 fee of Ksh. 95 <strong> Non-refundable fee</strong> is paid by borrower for detail verification
+</p>
+<p>
+Maximum Loan duration: Loan should be repayable in 1 Month (30 Days) from the day of borrowing
+</p>
+<p>
+Loan disbursement: Loan will be disbursed to the MPESA number provided & takes 5-7 working days to be processed.
+</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+
+       
+
+</div>
+<div id="social-proof">
+    <div id="title"><span class="name">Titus</span> <span class="object"> 0756xxx322</span> </div>
+    <div id="description"><span class="action">Received Ksh. <span class="address">5,000</span> </span> <span class="course">Car Loan topup loan</span></div>
+    <div id="time"><span class="time-counter">20</span>s Ago <!--<span class="address">Hà nội</span></div>-->
+        <!--<div id="verify"><img src="https://app.socialprove.com/statics/app/check.png" width="11"> Xác thực bởi <span class="verify_src">Insider</span></div>-->
+    </div>
+<!-- Js Scripts -->
+
+<!-- bootstrap JS -->
+<script src="../js/bootstrap.js"></script>
+
+<!-- Jquery -->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script><script  src="./script.js"></script>
+
+
+<!-- Custom Js -->
+<script src="../js/custom.js"></script>
+<script src="../js/script.js"></script>
+<script src="app.js"></script>
+
+<!--preloader-->
+<script>
+    window.addEventListener('load',function(){
+        document.querySelector('body').classList.add("loaded")
+    });
+</script>
+<!-- Social Proof-->
+
+
+<script src="https://www.google.com/recaptcha/api.js?" async defer></script>
+
+</body>
+</html>
+
